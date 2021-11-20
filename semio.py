@@ -1,117 +1,118 @@
 from tkinter import *
 import tkinter.font as font
+import os
 
 def startGame(asdf):
     def hits1update(a):
         global hits1
         hits1 = hits1 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         hits1number.config(text=str(hits1))
     def hits2update(b):
         global hits2
         hits2 = hits2 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         hits2number.config(text=str(hits2))
     def hits3update(c):
         global hits3
         hits3 = hits3 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         hits3number.config(text=str(hits3))
     def hits4update(d):
         global hits4
         hits4 = hits4 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         hits4number.config(text=str(hits4))
     def aces1update(e):
         global aces1
         aces1 = aces1 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         aces1number.config(text=str(aces1))
     def aces2update(f):
         global aces2
         aces2 = aces2 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         aces2number.config(text=str(aces2))
     def aces3update(g):
         global aces3
         aces3 = aces3 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         aces3number.config(text=str(aces3))
     def aces4update(h):
         global aces4
         aces4 = aces4 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         aces4number.config(text=str(aces4))
     def errors1update(i):
         global errors1
         errors1 = errors1 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         errors1number.config(text=str(errors1))
     def errors2update(j):
         global errors2
         errors2 = errors2 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         errors2number.config(text=str(errors2))
     def errors3update(k):
         global errors3
         errors3 = errors3 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         errors3number.config(text=str(errors3))
     def errors4update(l):
         global errors4
         errors4 = errors4 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         errors4number.config(text=str(errors4))
     def socials1update(m):
         global socials1
         socials1 = socials1 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         socials1number.config(text=str(socials1))
     def socials2update(n):
         global socials2
         socials2 = socials2 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         socials2number.config(text=str(socials2))
     def socials3update(o):
         global socials3
         socials3 = socials3 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         socials3number.config(text=str(socials3))
     def socials4update(p):
         global socials4
         socials4 = socials4 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         socials4number.config(text=str(socials4))
     def sinks1update(q):
@@ -125,7 +126,7 @@ def startGame(asdf):
             try:
                 sinkValue1 = int(sinkScore.get()) + sinkValue1
                 sinks1number.config(text=(sinks1,'(',str(sinkValue1),')'))
-                team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+                team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
                 score1.config(text = str(team1score))
                 newWindow1.destroy()
             except:
@@ -137,7 +138,7 @@ def startGame(asdf):
         sinkInstructions.pack()
         global sinks1
         sinks1 = sinks1 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         sinks1number.config(text=(sinks1,'(',str(sinkValue1),')'))
     def sinks2update(r):
@@ -151,7 +152,7 @@ def startGame(asdf):
             try:
                 sinkValue2 = int(sinkScore.get()) + sinkValue2
                 sinks2number.config(text=(sinks2,'(',str(sinkValue2),')'))
-                team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+                team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
                 score1.config(text = str(team1score))
                 newWindow1.destroy()
             except:
@@ -163,7 +164,7 @@ def startGame(asdf):
         sinkInstructions.pack()
         global sinks2
         sinks2 = sinks2 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         sinks2number.config(text=str(sinks2))
     def sinks3update(s):
@@ -177,7 +178,7 @@ def startGame(asdf):
             try:
                 sinkValue3 = int(sinkScore.get()) + sinkValue3
                 sinks3number.config(text=(sinks3,'(',str(sinkValue3),')'))
-                team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+                team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
                 score2.config(text = str(team2score))
                 newWindow1.destroy()
             except:
@@ -189,7 +190,7 @@ def startGame(asdf):
         sinkInstructions.pack()
         global sinks3
         sinks3 = sinks3 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         sinks3number.config(text=str(sinks3))
     def sinks4update(t):
@@ -203,7 +204,7 @@ def startGame(asdf):
             try:
                 sinkValue4 = int(sinkScore.get()) + sinkValue4
                 sinks4number.config(text=(sinks4,'(',str(sinkValue4),')'))
-                team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+                team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
                 score2.config(text = str(team2score))
                 newWindow1.destroy()
             except:
@@ -215,33 +216,75 @@ def startGame(asdf):
         sinkInstructions.pack()
         global sinks4
         sinks4 = sinks4 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         sinks4number.config(text=str(sinks4))
     def noogies1update(u):
         global noogies1
         noogies1 = noogies1 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         nBox1number.config(text=str(noogies1))
     def noogies2update(v):
         global noogies2
         noogies2 = noogies2 + 1
-        team1score = hits1 + hits2 + aces1 + aces2 - errors1 - errors2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
+        team1score = hits1 + hits2 + aces1 + aces2 + socials1 + socials2 + socials3 + socials4 + noogies1 + noogies2 + sinkValue1 + sinkValue2 + errors3 + errors4
         score1.config(text = str(team1score))
         nBox2number.config(text=str(noogies2))
     def noogies3update(w):
         global noogies3
         noogies3 = noogies3 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         nBox3number.config(text=str(noogies3))
     def noogies4update(x):
         global noogies4
         noogies4 = noogies4 + 1
-        team2score = hits3 + hits4 + aces3 + aces4 - errors3 - errors4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
+        team2score = hits3 + hits4 + aces3 + aces4 + socials1 + socials2 + socials3 + socials4 + noogies3 + noogies4 + sinkValue3 + sinkValue4 + errors1 + errors2
         score2.config(text = str(team2score))
         nBox4number.config(text=str(noogies4))
+
+    def getNets(y):
+        net1 = hits1 + aces1 - errors1 + sinkValue1
+        net2 = hits2 + aces2 - errors2 + sinkValue2
+        net3 = hits3 + aces3 - errors3 + sinkValue3
+        net4 = hits4 + aces4 - errors4 + sinkValue4
+        newWindow2 = Toplevel(newWindow)
+        newWindow2.title("Nets")
+        newWindow2.geometry("400x400")
+        netLabel = Label(newWindow2, text = "The nets are:", font = labelFont)
+        netLabel.pack()
+        net1Label = Label(newWindow2, text = (player1, ":", net1))
+        net1Label.pack()
+        net2Label = Label(newWindow2, text = (player2, ":", net2))
+        net2Label.pack()
+        net3Label = Label(newWindow2, text = (player3, ":", net3))
+        net3Label.pack()
+        net4Label = Label(newWindow2, text = (player4, ":", net4))
+        net4Label.pack()
+        def exit1(a):
+            newWindow2.destroy()
+        exitButton = Button(newWindow2, text = 'Back "a" ')
+        exitButton.bind('a', exit1)
+        exitButton.pack()
+
+    def endGame(xx):
+        newWindow3 = Toplevel(newWindow)
+        newWindow3.title("Confirm")
+        newWindow3.geometry("400x400")
+        end = Label(newWindow3, text = "Are you sure you want to end the game? \n Press 'a' to go back | Press 'b' to end the game")
+        end.pack()
+        def exit2(yy):
+            newWindow3.destroy()
+        def gg(pp):
+            os.system('sudo reboot')
+        asdf = Button(newWindow3, text = 'GGs')
+        asdf.bind('a', exit2)
+        asdf.bind('b', gg)
+        asdf.pack()
+        
+        
+        
         
     newWindow = Toplevel()
     newWindow.title("Semio")
@@ -273,9 +316,11 @@ def startGame(asdf):
     player4g.place(x = 785, y = 80, width = 200, height = 40)
 
     instructions = Label(canvas, bg = "gold", fg = "gray12", text = "Hit letter in top right to add", font = newFont, anchor = 'w')
-    instructions.place(x = 785, y = 30, width = 200, height = 20)
-    instructions1 = Label(canvas, bg = "gold", fg = "gray12", text = "Hit letter jakfba to undo", font = newFont, anchor = 'w')
-    instructions1.place(x = 785, y = 50, width = 200, height = 20)
+    instructions.place(x = 785, y = 10, width = 200, height = 20)
+    instructions1 = Label(canvas, bg = "gold", fg = "gray12", text = "Hit letter z to end game", font = newFont, anchor = 'w')
+    instructions1.place(x = 785, y = 30, width = 200, height = 20)
+    instructions2 = Label(canvas, bg = "gold", fg = "gray12", text = "Hit letter y to see the nets", font = newFont, anchor = 'w')
+    instructions2.place(x = 785, y = 50, width = 200, height = 20)
 
     scoreUpdate = Button(canvas, text = "Score Update", width = 10, height = 1)
     scoreUpdate.bind("a", hits1update)
@@ -302,6 +347,8 @@ def startGame(asdf):
     scoreUpdate.bind("v", noogies2update)
     scoreUpdate.bind("w", noogies3update)
     scoreUpdate.bind("x", noogies4update)
+    scoreUpdate.bind("y", getNets)
+    scoreUpdate.bind("z", endGame)
     scoreUpdate.place(x = 10, y = 18)
     
     
